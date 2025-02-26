@@ -1,18 +1,37 @@
 body {
-     background-color: #EEF9FC;
+    background-color: #EEF9FC;
     text-align: center;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    /* 使用flex布局，并设置方向为列 */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    /* 确保body至少与视口等高 */
+    min-height: 100vh;
 }
-
+ 
 .container {
-    width: 90%; /* 适应手机屏幕宽度 */
-    max-width: 500px; /* 最大宽度限制 */
+    width: 90%; /* 根据手机屏幕宽度自适应 */
+    max-width: 500px; /* 设置最大宽度 */
+    margin: 0 auto; /* 水平居中 */
+    /* 可根据需要添加内边距或外边距 */
+    padding: 10px;
+    box-sizing: border-box; /* 确保内边距和边框不会增加元素的总宽度 */
+}
+ 
+/* 设置.banner始终位于页面底部 */
+.banner {
+    position: fixed; /* 固定定位 */
+    bottom: 0; /* 紧贴页面底部 */
+    left: 0; /* 紧贴页面左侧 */
+    width: 100%; /* 宽度覆盖整个页面 */
+    color: #999999; /* 文字颜色 */
+    text-align: center; /* 文字居中 */
+    padding: 2px 0; /* 内边距，确保文字不紧贴边框 */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* 可选：添加阴影效果 */
+    /* 可选：为.banner添加z-index，确保其位于其他内容之上 */
+    z-index: 1000;
 }
 
 #mainImage {
